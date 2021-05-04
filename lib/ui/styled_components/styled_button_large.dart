@@ -19,7 +19,7 @@ class StyledButtonLarge extends StatelessWidget {
           alignment: Alignment.center,
           child: Text(
             title,
-            style: Theme.of(context).accentTextTheme.headline4,
+            style: Theme.of(context).textTheme.headline4,
           ),
         ),
       ),

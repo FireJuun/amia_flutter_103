@@ -10,8 +10,9 @@ class _AppColors {
   static const Color grey = Color(0xFF636463);
   static const Color blackSurface = Color(0xff050505);
   static const Color blackBackground = Color(0xff181818);
-  static const Color textDark = Colors.white;
-  static const Color textLight = Color(0xFFf7f7f7);
+
+  static const Color textDark = Color(0xFF3D3D3D);
+  static const Color textLight = Color(0xFFF7F7F7);
 }
 
 TextTheme _buildTextTheme() {
