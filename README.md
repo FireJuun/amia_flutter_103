@@ -1,6 +1,6 @@
 # amia_flutter_103
 
-A new Flutter project.
+Demo repository for the 2021 AMIA Virtual Clinical Informatics Conference workshop on Flutter + FHIR
 
 ## Getting Started
 
