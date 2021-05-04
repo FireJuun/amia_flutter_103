@@ -1,18 +1,57 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 
-void main() {
+import 'controllers/controllers.dart';
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await _initServices();
   runApp(MyApp());
+}
+
+Future<void> _initServices() async {
+  await GetStorage.init();
+  Get.put<StorageController>(StorageController());
+  StorageController.to.getFirstLoadInfoFromStore();
+  Get.put<ThemeController>(ThemeController());
+  await ThemeController.to.getThemeModeFromStore();
 }
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'AMIA Demo',
-      theme: ThemeData(primarySwatch: Colors.blue),
+    return GetMaterialApp(
+      theme: ThemeController.to.lightTheme.themeData,
+      darkTheme: ThemeController.to.darkTheme.themeData,
+      themeMode: ThemeController.to.themeMode,
       home: Scaffold(
-        body: Center(child: Text('AMIA Demo')),
+        appBar: AppBar(
+          title: Text('AMIA Demo'),
+        ),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              ElevatedButton(
+                onPressed: () =>
+                    ThemeController.to.setThemeMode(ThemeMode.light),
+                child: Text('Light Mode'),
+              ),
+              ElevatedButton(
+                onPressed: () =>
+                    ThemeController.to.setThemeMode(ThemeMode.dark),
+                child: Text('Dark Mode'),
+              ),
+              ElevatedButton(
+                onPressed: () =>
+                    ThemeController.to.setThemeMode(ThemeMode.system),
+                child: Text('System Default'),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
