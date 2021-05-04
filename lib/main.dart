@@ -1,3 +1,4 @@
+import 'package:amia_flutter_103/ui/views/views.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
@@ -26,33 +27,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeController.to.lightTheme.themeData,
       darkTheme: ThemeController.to.darkTheme.themeData,
       themeMode: ThemeController.to.themeMode,
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('AMIA Demo'),
-        ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              ElevatedButton(
-                onPressed: () =>
-                    ThemeController.to.setThemeMode(ThemeMode.light),
-                child: Text('Light Mode'),
-              ),
-              ElevatedButton(
-                onPressed: () =>
-                    ThemeController.to.setThemeMode(ThemeMode.dark),
-                child: Text('Dark Mode'),
-              ),
-              ElevatedButton(
-                onPressed: () =>
-                    ThemeController.to.setThemeMode(ThemeMode.system),
-                child: Text('System Default'),
-              ),
-            ],
-          ),
-        ),
-      ),
+      home: HomeView(),
     );
   }
 }

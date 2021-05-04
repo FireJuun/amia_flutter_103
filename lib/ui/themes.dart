@@ -19,7 +19,7 @@ TextTheme _buildTextTheme() {
     headline1: _style(96.0, FontWeight.normal),
     headline2: _style(60.0, FontWeight.bold),
     headline3: _style(48.0, FontWeight.normal),
-    headline4: _style(36.0, FontWeight.bold),
+    headline4: _style(28.0, FontWeight.w500),
     headline5: _style(22.0, FontWeight.w500),
     headline6: _style(18.0, FontWeight.w500),
     bodyText1: _style(18.0, FontWeight.normal),
