@@ -9,7 +9,11 @@ class HomeView extends StatelessWidget {
     final ThemeController themeController = Get.find();
     return Scaffold(
       appBar: AppBar(
-        title: Text('AMIA Demo'),
+        centerTitle: true,
+        title: Text(
+          'AMIA Sandboxes',
+          style: Theme.of(context).textTheme.headline4,
+        ),
       ),
       body: Center(
         child: Column(

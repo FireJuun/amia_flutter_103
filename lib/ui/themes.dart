@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
 class _AppColors {
-  static const Color primary = Color(0xFF689E80);
+  static const Color primary = Color(0xFF75AF8F);
   static const Color primaryDark = Color(0xFF32494e);
   static const Color accent = Color(0xFFE1994C);
-  static const Color accentDark = Color(0xFFd1893C);
+  static const Color accentDark = Color(0xFFB0712D);
   static const Color redDarkMode = Color(0xFF984F46);
   static const Color greySurface = Color(0xFFE4E4E3);
   static const Color grey = Color(0xFF636463);
   static const Color blackSurface = Color(0xff050505);
   static const Color blackBackground = Color(0xff181818);
 
-  static const Color textDark = Color(0xFF3D3D3D);
+  static const Color textDark = Color(0xFF1E1E1E);
   static const Color textLight = Color(0xFFF7F7F7);
 }
 
@@ -20,9 +20,9 @@ TextTheme _buildTextTheme() {
     headline1: _style(96.0, FontWeight.normal),
     headline2: _style(60.0, FontWeight.bold),
     headline3: _style(48.0, FontWeight.normal),
-    headline4: _style(28.0, FontWeight.w500),
-    headline5: _style(22.0, FontWeight.w500),
-    headline6: _style(18.0, FontWeight.w500),
+    headline4: _style(26.0, FontWeight.w700),
+    headline5: _style(24.0, FontWeight.w500),
+    headline6: _style(20.0, FontWeight.bold),
     bodyText1: _style(18.0, FontWeight.normal),
     bodyText2: _style(16.0, FontWeight.normal),
     subtitle1: _style(16.0, FontWeight.normal),
@@ -124,6 +124,10 @@ class AppTheme {
           cursorColor: primary,
           selectionColor: grey,
           selectionHandleColor: Colors.transparent,
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all<Color>(secondary)),
         ),
         buttonColor: primary,
         highlightColor: primary,
