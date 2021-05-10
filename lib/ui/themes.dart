@@ -127,6 +127,11 @@ class AppTheme {
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ButtonStyle(
+              shape: MaterialStateProperty.all<OutlinedBorder>(
+                RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30),
+                ),
+              ),
               backgroundColor: MaterialStateProperty.all<Color>(secondary)),
         ),
         buttonColor: primary,
