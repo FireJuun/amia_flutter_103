@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 class StyledButtonLarge extends StatelessWidget {
-  const StyledButtonLarge({Key? key, required this.onPressed, String? title})
-      : title = title ?? '',
+  const StyledButtonLarge({Key? key, this.onPressed, String? title})
+      : this.title = title ?? '',
         super(key: key);
 
   final String title;
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {

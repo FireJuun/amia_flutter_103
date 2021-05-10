@@ -1,35 +1,26 @@
-import 'package:amia_flutter_103/controllers/controllers.dart';
 import 'package:amia_flutter_103/ui/styled_components/styled_components.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final ThemeController themeController = Get.find();
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text(
-          'AMIA Sandboxes',
-          style: Theme.of(context).textTheme.headline4,
-        ),
-      ),
+      appBar: StyledAppBar(context),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             StyledButtonLarge(
-              onPressed: () => themeController.setThemeMode(ThemeMode.light),
-              title: 'Light Mode',
+              onPressed: () {},
+              title: 'Layout',
             ),
             StyledButtonLarge(
-              onPressed: () => themeController.setThemeMode(ThemeMode.dark),
-              title: 'Dark Mode',
+              onPressed: () {},
+              title: 'FHIR',
             ),
             StyledButtonLarge(
-              onPressed: () => themeController.setThemeMode(ThemeMode.system),
-              title: 'System Default',
+              onPressed: () {},
+              title: 'LiveShare',
             ),
           ],
         ),
