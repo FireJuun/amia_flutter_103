@@ -1,5 +1,8 @@
 import 'package:amia_flutter_103/ui/styled_components/styled_components.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import '../views.dart';
 
 class HomeView extends StatelessWidget {
   @override
@@ -11,15 +14,15 @@ class HomeView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             StyledButtonLarge(
-              onPressed: () {},
+              onPressed: () => Get.to(LayoutSandboxView()),
               title: 'Layout',
             ),
             StyledButtonLarge(
-              onPressed: () {},
+              onPressed: () => Get.to(FhirSandboxView()),
               title: 'FHIR',
             ),
             StyledButtonLarge(
-              onPressed: () {},
+              onPressed: () => Get.to(LiveShareSandboxView()),
               title: 'LiveShare',
             ),
           ],
