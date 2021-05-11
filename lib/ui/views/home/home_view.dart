@@ -23,7 +23,8 @@ class HomeView extends StatelessWidget {
             ),
             Divider(
               thickness: 4,
-              color: Colors.black54,
+              color:
+                  Theme.of(context).textTheme.bodyText1?.color ?? Colors.grey,
             ),
             StyledButtonLarge(
               onPressed: () => Get.to(FhirSandboxView()),

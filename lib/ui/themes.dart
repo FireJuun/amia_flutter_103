@@ -8,7 +8,7 @@ class _AppColors {
   static const Color redDarkMode = Color(0xFF984F46);
   static const Color greySurface = Color(0xFFE4E4E3);
   static const Color grey = Color(0xFF636463);
-  static const Color blackSurface = Color(0xff050505);
+  static const Color blackSurface = Color(0xff444444);
   static const Color blackBackground = Color(0xff181818);
 
   static const Color textDark = Color(0xFF1E1E1E);
