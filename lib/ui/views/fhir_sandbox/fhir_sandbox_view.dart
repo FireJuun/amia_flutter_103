@@ -6,6 +6,9 @@ import 'package:get/get.dart';
 import 'sdc_demo.dart';
 import 'sdc_demo_controller.dart';
 
+// todo: combine _tabList and _tabViews into one model
+// todo: change previous/next to _tabList in StyledBottomNavBar
+
 const _CONTROLLER_ID = 'FHIR_SANDBOX';
 final _tabList = <String, Function>{
   'Survey': () {},
@@ -21,18 +24,19 @@ class FhirSandboxView extends StatelessWidget {
   Widget build(BuildContext context) {
     Get.put(SdcDemoController());
 
+    // *** MAKE SURE YOU CALL THIS BEFORE USING StyledBottomNavBar ***
     final controller = Get.put(StyledBottomNavBarController(tabList: _tabList),
         tag: _CONTROLLER_ID);
 
     return Scaffold(
       appBar: StyledAppBar(context, title: 'FHIR Sandbox'),
-      bottomNavigationBar: StyledBottomNavBar(
-        controllerId: _CONTROLLER_ID,
-        tabList: _tabList,
-      ),
       body: TabBarView(
         controller: controller.tabController,
         children: _tabViews,
+      ),
+      bottomNavigationBar: StyledBottomNavBar(
+        controllerId: _CONTROLLER_ID,
+        tabList: _tabList,
       ),
     );
   }
