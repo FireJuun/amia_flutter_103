@@ -18,6 +18,14 @@ class HomeView extends StatelessWidget {
               title: 'Layout',
             ),
             StyledButtonLarge(
+              onPressed: () => Get.to(CounterSandboxView()),
+              title: 'Counter',
+            ),
+            Divider(
+              thickness: 4,
+              color: Colors.black54,
+            ),
+            StyledButtonLarge(
               onPressed: () => Get.to(FhirSandboxView()),
               title: 'FHIR',
             ),
