@@ -5,6 +5,11 @@ import 'package:get/get.dart';
 import '../views.dart';
 
 class HomeView extends StatelessWidget {
+  Widget buildIcon(IconData icon, BuildContext context) => Icon(
+        icon,
+        color: Theme.of(context).textTheme.bodyText1?.color,
+      );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,24 +20,23 @@ class HomeView extends StatelessWidget {
           children: [
             StyledButtonLarge(
               onPressed: () => Get.to(LayoutSandboxView()),
-              title: 'Layout',
+              title: '1. Layouts',
+              trailing: buildIcon(Icons.dashboard, context),
             ),
             StyledButtonLarge(
               onPressed: () => Get.to(CounterSandboxView()),
-              title: 'Counter',
-            ),
-            Divider(
-              thickness: 4,
-              color:
-                  Theme.of(context).textTheme.bodyText1?.color ?? Colors.grey,
+              title: '2. Counters',
+              trailing: buildIcon(Icons.add_circle_outline, context),
             ),
             StyledButtonLarge(
               onPressed: () => Get.to(FhirSandboxView()),
-              title: 'FHIR',
+              title: '3. FHIR',
+              trailing: buildIcon(Icons.local_fire_department, context),
             ),
             StyledButtonLarge(
               onPressed: () => Get.to(LiveShareSandboxView()),
-              title: 'LiveShare',
+              title: '4. LiveShare',
+              trailing: buildIcon(Icons.screen_share, context),
             ),
           ],
         ),

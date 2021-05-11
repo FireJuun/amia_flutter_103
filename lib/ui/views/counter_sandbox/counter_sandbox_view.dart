@@ -11,7 +11,7 @@ class CounterSandboxView extends StatelessWidget {
       init: CounterSandboxController(),
       builder: (controller) {
         return Scaffold(
-          appBar: StyledAppBar(context, title: 'Counter Sandbox'),
+          appBar: StyledAppBar(context, title: 'Counters Sandbox'),
           body: Center(
             child: Text(
               'Button Pressed:\n${controller.counter} times',

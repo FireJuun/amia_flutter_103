@@ -5,7 +5,7 @@ class LayoutSandboxView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: StyledAppBar(context, title: 'Layout Sandbox'),
+      appBar: StyledAppBar(context, title: 'Layouts Sandbox'),
     );
   }
 }
