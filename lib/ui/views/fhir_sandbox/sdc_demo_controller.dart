@@ -1,14 +1,11 @@
 import 'package:faiadashu/faiadashu.dart';
 import 'package:fhir/r4.dart';
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 // spec: https://github.com/tiloc/faiadashu/blob/main/example/lib/main.dart
 
-class FhirSandboxController extends GetxController {
+class SdcDemoController extends GetxController {
   late final FhirResourceProvider resourceBundleProvider;
-
-  final ScrollController listScrollController = ScrollController();
 
   final Map<String, QuestionnaireResponse?> savedResponses = {};
 
@@ -49,6 +46,16 @@ class FhirSandboxController extends GetxController {
           'assets/valuesets/ucum_bodyweight.json',
     },
   );
+
+  final questionnairePath = 'assets/fhir/sdc_demo.json';
+
+  late final registryFhirResourceProvider = RegistryFhirResourceProvider([
+    AssetResourceProvider.singleton(
+        questionnaireResourceUri, questionnairePath),
+    InMemoryResourceProvider.inMemory(
+        questionnaireResponseResourceUri, restoreResponse(questionnairePath)),
+    resourceBundleProvider
+  ]);
 
   @override
   void onInit() {

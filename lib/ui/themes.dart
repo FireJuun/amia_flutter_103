@@ -7,7 +7,7 @@ class _AppColors {
   static const Color accentDark = Color(0xFFB0712D);
   static const Color redDarkMode = Color(0xFF984F46);
   static const Color greySurface = Color(0xFFE4E4E3);
-  static const Color grey = Color(0xFF636463);
+  static const Color grey = Color(0xFFA6A6A6);
   static const Color blackSurface = Color(0xff444444);
   static const Color blackBackground = Color(0xff181818);
 
@@ -134,8 +134,31 @@ class AppTheme {
               ),
               backgroundColor: MaterialStateProperty.all<Color>(secondary)),
         ),
+        textButtonTheme: TextButtonThemeData(
+          style: ButtonStyle(
+            foregroundColor: MaterialStateProperty.all<Color>(txt),
+            backgroundColor: MaterialStateProperty.resolveWith((states) {
+              // interactive states = secondary color
+              if (states.any(_interactiveStates.contains)) {
+                return secondary;
+              }
+              // disabled state = grey
+              else if (states.any((test) => test == MaterialState.disabled)) {
+                return grey;
+              }
+              return primary;
+            }),
+          ),
+        ),
         buttonColor: primary,
         highlightColor: primary,
         toggleableActiveColor: primary);
   }
 }
+
+// spec: https://api.flutter.dev/flutter/material/MaterialStateProperty-class.html
+const Set<MaterialState> _interactiveStates = <MaterialState>{
+  MaterialState.pressed,
+  MaterialState.hovered,
+  MaterialState.focused,
+};
