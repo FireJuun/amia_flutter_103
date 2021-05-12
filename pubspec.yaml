@@ -26,6 +26,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   faiadashu: ^0.3.0
   fhir: ^0.4.6
+  fhir_auth: ^0.3.0-nullsafety.8
+  fhir_at_rest: ^0.4.2
   get: ^4.1.4
   get_storage: ^2.0.2
 

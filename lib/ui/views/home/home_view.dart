@@ -1,3 +1,4 @@
+import 'package:amia_flutter_103/services/gcs_request.dart';
 import 'package:amia_flutter_103/ui/styled_components/styled_components.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -37,6 +38,11 @@ class HomeView extends StatelessWidget {
               onPressed: () => Get.to(LiveShareSandboxView()),
               title: '4. LiveShare',
               trailing: buildIcon(Icons.screen_share, context),
+            ),
+            StyledButtonLarge(
+              onPressed: () async => await gcsRequest(),
+              title: 'Upload Patient',
+              trailing: buildIcon(Icons.upload_file, context),
             ),
           ],
         ),
