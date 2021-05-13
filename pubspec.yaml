@@ -28,6 +28,8 @@ dependencies:
   fhir: ^0.4.6
   get: ^4.1.4
   get_storage: ^2.0.2
+  percent_indicator: ^3.0.1
+  scrollable_positioned_list: ^0.1.10
 
 dev_dependencies:
   flutter_test:
