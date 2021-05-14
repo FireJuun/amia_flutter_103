@@ -26,7 +26,7 @@ class SingleChoiceResponse extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<Widget> options = [];
-    final Rx<int> choice = Rx<int>(
+    final Rx<num> choice = Rx<num>(
       answers.indexWhere((element) =>
           initialAnswer.isEmpty ? false : element[0] == initialAnswer[0]),
     );
@@ -100,14 +100,15 @@ class SingleChoiceResponse extends StatelessWidget {
           if (answers.isNotEmpty) {
             var first = double.tryParse(answers.first[1]) ?? 0;
             var last = double.tryParse(answers.last[1]) ?? 10;
+            choice.value = first;
             options.add(Obx(() => Slider(
-                  value: first,
+                  value: choice.value.toDouble(),
                   min: first,
                   max: last,
                   divisions: (first - last).abs().toInt(),
                   onChanged: (changed) {
-                    setAnswer(changed.toInt(), linkId);
-                    choice.value = changed.toInt();
+                    setAnswer(changed.toString(), linkId);
+                    choice.value = changed;
                   },
                 )));
           }
