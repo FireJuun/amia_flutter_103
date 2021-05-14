@@ -1,4 +1,4 @@
-final fhirLiveshareJson = {
+const fhirLiveshareJson = {
   "resourceType": "Questionnaire",
   "title": "flutter_103_fhir_liveshare",
   "item": [
@@ -27,8 +27,12 @@ final fhirLiveshareJson = {
           "text": "Good FHIR puns (each vote counts as 1)",
           "type": "choice",
           "answerOption": [
-            {"valueString": "Always"},
-            {"valueString": "Sometimes"}
+            {
+              "valueCoding": {"code": "0", "display": "Always"}
+            },
+            {
+              "valueCoding": {"code": "1", "display": "Sometimes"}
+            }
           ]
         },
         {
@@ -51,8 +55,12 @@ final fhirLiveshareJson = {
           "text": "Favorite FHIR pun (vote counts as 5)",
           "type": "choice",
           "answerOption": [
-            {"valueString": "Always"},
-            {"valueString": "Sometimes"}
+            {
+              "valueCoding": {"code": "0", "display": "Always"}
+            },
+            {
+              "valueCoding": {"code": "1", "display": "Sometimes"}
+            }
           ]
         }
       ]

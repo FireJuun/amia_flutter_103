@@ -1,4 +1,4 @@
-final fhirDemoJson = {
+const fhirDemoJson = {
   "resourceType": "Questionnaire",
   "title": "flutter_103_fhir_demo",
   "item": [
@@ -27,8 +27,12 @@ final fhirDemoJson = {
           "text": "Is this for testing or for feedback?",
           "type": "choice",
           "answerOption": [
-            {"valueString": "Testing"},
-            {"valueString": "Feedback"}
+            {
+              "valueCoding": {"code": "testing", "display": "Testing"}
+            },
+            {
+              "valueCoding": {"code": "feedback", "display": "Feedback"}
+            }
           ]
         },
         {
@@ -51,8 +55,12 @@ final fhirDemoJson = {
           "text": "My knowledge about Flutter before / after:",
           "type": "choice",
           "answerOption": [
-            {"valueString": "Minimal"},
-            {"valueString": "Expert"}
+            {
+              "valueCoding": {"code": "1", "display": "Minimal"}
+            },
+            {
+              "valueCoding": {"code": "10", "display": "Expert"}
+            }
           ]
         },
         {
@@ -75,8 +83,12 @@ final fhirDemoJson = {
           "text": "My knowledge about FHIR before / after:",
           "type": "choice",
           "answerOption": [
-            {"valueString": "Minimal"},
-            {"valueString": "Expert"}
+            {
+              "valueCoding": {"code": "1", "display": "Minimal"}
+            },
+            {
+              "valueCoding": {"code": "10", "display": "Expert"}
+            }
           ]
         },
         {
@@ -100,8 +112,12 @@ final fhirDemoJson = {
               "I believe this workshop is valuable for informatics practice",
           "type": "choice",
           "answerOption": [
-            {"valueString": "Not at all"},
-            {"valueString": "Significantly"}
+            {
+              "valueCoding": {"code": "1", "display": "Not at all"}
+            },
+            {
+              "valueCoding": {"code": "5", "display": "Significantly"}
+            }
           ]
         },
         {
@@ -124,8 +140,12 @@ final fhirDemoJson = {
           "text": "Perceived difficulty level of workshop:",
           "type": "choice",
           "answerOption": [
-            {"valueString": "Easy to pick up"},
-            {"valueString": "Difficult to follow"}
+            {
+              "valueCoding": {"code": "1", "display": "Easy to pick up"}
+            },
+            {
+              "valueCoding": {"code": "5", "display": "Difficult to follow"}
+            }
           ]
         },
         {
@@ -154,6 +174,6 @@ final fhirDemoJson = {
           "type": "string"
         }
       ]
-    }
+    },
   ]
 };
