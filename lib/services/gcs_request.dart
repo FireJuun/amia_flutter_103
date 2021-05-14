@@ -1,4 +1,3 @@
-import 'package:amia_flutter_103/api/api.dart';
 import 'package:fhir/r4.dart';
 import 'package:fhir_at_rest/r4.dart';
 import 'package:fhir_auth/r4.dart';
@@ -6,10 +5,9 @@ import 'package:fhir_auth/r4.dart';
 import 'new_patient.dart';
 
 Future gcsRequest() async {
-  final client = GcsClient(
-    fhirUrl: FhirUri(Api.gcsUrl),
-    scopes: Api.gcsScopes,
-  );
+  const gcsUrl =
+      'https://healthcare.googleapis.com/v1/projects/amia-flutter-103/locations/us-east4/datasets/amia-flutter-103/fhirStores/demo1/fhir';
+  final client = GcsClient(fhirUrl: FhirUri(gcsUrl));
 
   try {
     await client.login();
