@@ -19,7 +19,7 @@ class MultipleChoiceResponse extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> options = [];
+    final List<Widget> options = [];
     final choice = <RxBool>[];
     bool _getChoice(int i) => choice[i].value;
 
@@ -50,7 +50,8 @@ class MultipleChoiceResponse extends StatelessWidget {
                 ),
               ),
               Expanded(
-                  child: Text(answers[i][0], style: TextStyle(fontSize: 20))),
+                  child: Text(answers[i][0],
+                      style: const TextStyle(fontSize: 20))),
             ],
           ),
         );

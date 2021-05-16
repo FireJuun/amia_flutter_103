@@ -12,10 +12,10 @@ class _SettingsDialogContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: Center(child: Text('Change Theme')),
+      title: const Center(child: Text('Change Theme')),
       content: Column(
         mainAxisSize: MainAxisSize.min,
-        children: [
+        children: const [
           _SettingsThemeModeTile(
             title: 'Light Mode',
             newThemeMode: ThemeMode.light,
@@ -37,7 +37,7 @@ class _SettingsDialogContent extends StatelessWidget {
 class _SettingsThemeModeTile extends StatelessWidget {
   const _SettingsThemeModeTile(
       {Key? key, String? title, required this.newThemeMode})
-      : this.title = title ?? '',
+      : title = title ?? '',
         super(key: key);
 
   final String title;

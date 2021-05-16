@@ -25,7 +25,7 @@ class SingleChoiceResponse extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> options = [];
+    final List<Widget> options = [];
     final Rx<num> choice = Rx<num>(
       answers.indexWhere((element) =>
           initialAnswer.isEmpty ? false : element[0] == initialAnswer[0]),
@@ -37,7 +37,7 @@ class SingleChoiceResponse extends StatelessWidget {
         break;
       case ItemControl.check_box:
         {
-          var _checked = List<bool>.filled(answers.length, false).obs;
+          final _checked = List<bool>.filled(answers.length, false).obs;
           for (var i = 0; i < answers.length; i++) {
             if (answers.isNotEmpty) {
               options.add(
@@ -63,7 +63,7 @@ class SingleChoiceResponse extends StatelessWidget {
                     ),
                     Expanded(
                         child: Text(answers[i][0],
-                            style: TextStyle(fontSize: 20))),
+                            style: const TextStyle(fontSize: 20))),
                   ],
                 ),
               );
@@ -81,7 +81,8 @@ class SingleChoiceResponse extends StatelessWidget {
               options.add(
                 Obx(
                   () => RadioListTile(
-                    title: Text(answers[i][0], style: TextStyle(fontSize: 20)),
+                    title: Text(answers[i][0],
+                        style: const TextStyle(fontSize: 20)),
                     value: i,
                     groupValue: choice.value,
                     onChanged: (changed) {
@@ -98,8 +99,8 @@ class SingleChoiceResponse extends StatelessWidget {
       case ItemControl.slider:
         {
           if (answers.isNotEmpty) {
-            var first = double.tryParse(answers.first[1]) ?? 0;
-            var last = double.tryParse(answers.last[1]) ?? 10;
+            final first = double.tryParse(answers.first[1]) ?? 0;
+            final last = double.tryParse(answers.last[1]) ?? 10;
             choice.value = first;
             options.add(Obx(() => Slider(
                   value: choice.value.toDouble(),
@@ -121,7 +122,8 @@ class SingleChoiceResponse extends StatelessWidget {
               options.add(
                 Obx(
                   () => RadioListTile(
-                    title: Text(answers[i][0], style: TextStyle(fontSize: 20)),
+                    title: Text(answers[i][0],
+                        style: const TextStyle(fontSize: 20)),
                     value: i,
                     groupValue: choice.value,
                     onChanged: (changed) {

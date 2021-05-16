@@ -189,7 +189,7 @@ class SurveyController extends GetxController {
       }
       if (item.item != null) {
         if (item.item!.isNotEmpty) {
-          var foundLevel = _setCurrentItem(item.item!, level + 1);
+          final foundLevel = _setCurrentItem(item.item!, level + 1);
           if (foundLevel != -1) {
             if (item.type == QuestionnaireItemType.group &&
                 level + 1 == foundLevel) {
@@ -204,11 +204,11 @@ class SurveyController extends GetxController {
   }
 
   void _setFreeText() {
-    var itemLength = _currentItem?.item?.length ?? 0;
+    final itemLength = _currentItem?.item?.length ?? 0;
     var codeIndex = -1;
     if (itemLength >= 1) {
       for (var item in _currentItem!.item!) {
-        var codeLength = item.code?.length ?? 0;
+        final codeLength = item.code?.length ?? 0;
         if (codeLength >= 1) {
           codeIndex = item.code!.indexWhere((coding) =>
               coding.code == Code('22017-8') &&

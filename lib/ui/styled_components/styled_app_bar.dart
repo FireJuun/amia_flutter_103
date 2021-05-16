@@ -5,14 +5,14 @@ class StyledAppBar extends AppBar {
   StyledAppBar(BuildContext context, {String? title})
       : super(centerTitle: true, title: _AppBarTitle(title: title), actions: [
           IconButton(
-              icon: Icon(Icons.settings),
+              icon: const Icon(Icons.settings),
               onPressed: () => settingsDialog(context))
         ]);
 }
 
 class _AppBarTitle extends StatelessWidget {
   const _AppBarTitle({Key? key, String? title})
-      : this.title = title ?? 'AMIA Sandboxes',
+      : title = title ?? 'AMIA Sandboxes',
         super(key: key);
 
   final String title;

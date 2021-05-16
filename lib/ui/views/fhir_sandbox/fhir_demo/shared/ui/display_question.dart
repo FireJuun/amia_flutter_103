@@ -84,7 +84,8 @@ class DisplayQuestion extends StatelessWidget {
                 ? Center(
                     child: Text(
                     controller.text,
-                    style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
+                    style: const TextStyle(
+                        fontSize: 36, fontWeight: FontWeight.bold),
                     textAlign: TextAlign.center,
                   ))
                 : Container(
@@ -93,10 +94,11 @@ class DisplayQuestion extends StatelessWidget {
                       children: [
                         Container(height: Get.height * .03),
                         Text(controller.groupText,
-                            style: TextStyle(
+                            style: const TextStyle(
                                 fontSize: 30, fontWeight: FontWeight.bold)),
                         Container(height: Get.height * .03),
-                        Text(controller.text, style: TextStyle(fontSize: 24)),
+                        Text(controller.text,
+                            style: const TextStyle(fontSize: 24)),
                         Expanded(
                           child: Scrollbar(
                             isAlwaysShown: true,

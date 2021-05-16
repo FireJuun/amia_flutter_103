@@ -3,9 +3,9 @@ import 'package:get/get.dart';
 
 class StyledBottomNavBarController extends GetxController
     with SingleGetTickerProviderMixin {
-  static StyledBottomNavBarController get to => Get.find();
-
   StyledBottomNavBarController({required this.tabList});
+
+  static StyledBottomNavBarController get to => Get.find();
 
   final Map<String, Function> tabList;
 

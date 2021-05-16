@@ -1,3 +1,4 @@
+// ignore_for_file: prefer_single_quotes
 const fhirLiveshareJson = {
   "resourceType": "Questionnaire",
   "title": "flutter_103_fhir_liveshare",

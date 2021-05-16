@@ -20,7 +20,7 @@ class CounterSandboxView extends StatelessWidget {
             ),
           ),
           floatingActionButton: FloatingActionButton(
-            child: Icon(Icons.add),
+            child: const Icon(Icons.add),
             onPressed: () => controller.counter.value++,
           ),
         );

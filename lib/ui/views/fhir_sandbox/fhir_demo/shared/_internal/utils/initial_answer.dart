@@ -131,7 +131,7 @@ List<String> initialAnswer({
 }
 
 List<String> _getInitialAnswers(answer) {
-  var answerList = <String>[];
+  final answerList = <String>[];
   if (answer.valueCoding?.code != null) {
     answerList.add(answer.valueCoding!.code.toString());
   } else if (answer.valueString != null) {

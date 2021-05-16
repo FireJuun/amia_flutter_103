@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class StyledButtonLarge extends StatelessWidget {
   const StyledButtonLarge(
       {Key? key, this.onPressed, this.leading, this.trailing, String? title})
-      : this.title = title ?? '',
+      : title = title ?? '',
         super(key: key);
 
   final String title;

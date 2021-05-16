@@ -7,7 +7,7 @@ import 'package:percent_indicator/circular_percent_indicator.dart';
 /// been answered. It displays these as two CircularIndicators at the top left
 /// and right of the screens
 class PercentIndicator extends StatelessWidget {
-  PercentIndicator(this.index, this.total, this.percentComplete);
+  const PercentIndicator(this.index, this.total, this.percentComplete);
 
   final int index;
   final int total;
@@ -24,9 +24,9 @@ class PercentIndicator extends StatelessWidget {
           percent: index / total,
           center: Text(
             '${index + 1}/$total',
-            style: TextStyle(fontWeight: FontWeight.bold),
+            style: const TextStyle(fontWeight: FontWeight.bold),
           ),
-          header: Text(
+          header: const Text(
             'Screen',
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
@@ -39,9 +39,9 @@ class PercentIndicator extends StatelessWidget {
           percent: percentComplete,
           center: Text(
             '${(percentComplete * 100).toInt()}%',
-            style: TextStyle(fontWeight: FontWeight.bold),
+            style: const TextStyle(fontWeight: FontWeight.bold),
           ),
-          header: Text(
+          header: const Text(
             'Answered',
             style: TextStyle(fontWeight: FontWeight.bold),
           ),

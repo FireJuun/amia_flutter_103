@@ -35,10 +35,10 @@ class StyledBottomNavBar extends StatelessWidget {
                         ? null
                         : () => controller.tabController.index--,
                     icon: const Icon(Icons.navigate_before),
-                    label: Text('Previous'),
+                    label: const Text('Previous'),
                   ),
                 ),
-                Divider(
+                const Divider(
                   thickness: 2,
                 ),
                 // Next
@@ -48,7 +48,7 @@ class StyledBottomNavBar extends StatelessWidget {
                         ? null
                         : () => controller.tabController.index++,
                     icon: const Icon(Icons.navigate_next),
-                    label: Text('Next'),
+                    label: const Text('Next'),
                   ),
                 ),
               ],
