@@ -1,3 +1,4 @@
+import 'package:amia_flutter_103/services/gcs_request.dart';
 import 'package:amia_flutter_103/ui/styled_components/styled_components.dart';
 import 'package:amia_flutter_103/ui/views/fhir_sandbox/fhir_demo/shared/_internal/constants/constants.dart';
 import 'package:fhir/r4.dart';
@@ -41,6 +42,11 @@ class HomeView extends StatelessWidget {
                   arguments: [Questionnaire.fromJson(fhirLiveshareJson)]),
               title: '4. LiveShare',
               trailing: buildIcon(Icons.screen_share, context),
+            ),
+            StyledButtonLarge(
+              onPressed: () async => await gcsRequest(),
+              title: 'Upload Patient',
+              trailing: buildIcon(Icons.upload_file, context),
             ),
           ],
         ),
