@@ -3,6 +3,7 @@ import 'package:amia_flutter_103/ui/styled_components/styled_components.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'fhir_demo/fhir_demo_view.dart';
 import 'sdc_demo.dart';
 import 'sdc_demo_controller.dart';
 
@@ -15,7 +16,7 @@ final _tabList = <String, Function>{
   'SDC Demo': () {},
 };
 final _tabViews = <StatelessWidget>[
-  Container(),
+  FhirDemoView(),
   SdcDemo(),
 ];
 
