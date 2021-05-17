@@ -1,6 +1,6 @@
 # amia_flutter_103
 
-This Flutter project was designed for the AMIA 2021 Clinical Informatics Conference, W03: Workshop - Flutter Higher with FHIR: Learn to Create Interoperable Healthcare Apps in Real Time. Information about this workshop can be found [here](https://s4.goeshow.com/amia/cic/2021/schedule_at_a_glance.cfm?session_key=502CC075-007D-EB11-80E9-E2016027A0A5&session_date=Tuesday,%20May%2018,%202021).
+This Flutter project was designed for the AMIA 2021 Clinical Informatics Conference, `W03: Workshop - Flutter Higher with FHIR: Learn to Create Interoperable Healthcare Apps in Real Time`. Information about this workshop can be found [here](https://s4.goeshow.com/amia/cic/2021/schedule_at_a_glance.cfm?session_key=502CC075-007D-EB11-80E9-E2016027A0A5&session_date=Tuesday,%20May%2018,%202021).
 
 <img src="demo.gif" align="right"  width="320">
 
