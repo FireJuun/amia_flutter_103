@@ -53,7 +53,7 @@ const fhirDemoJson = {
             }
           ],
           "linkId": "/fhir_demo/2",
-          "text": "My knowledge about Flutter before / after:",
+          "text": "My knowledge about Flutter:",
           "type": "choice",
           "answerOption": [
             {
@@ -81,7 +81,7 @@ const fhirDemoJson = {
             }
           ],
           "linkId": "/fhir_demo/3",
-          "text": "My knowledge about FHIR before / after:",
+          "text": "My knowledge about FHIR:",
           "type": "choice",
           "answerOption": [
             {

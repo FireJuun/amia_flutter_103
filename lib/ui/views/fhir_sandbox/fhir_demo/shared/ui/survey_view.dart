@@ -7,7 +7,7 @@ import 'percent_indicator.dart';
 
 /// Base class for displaying the particular survey in question
 class SurveyView extends StatelessWidget {
-  final controller = Get.put(SurveyController());
+  final SurveyController controller = Get.find();
 
   @override
   Widget build(BuildContext context) {
