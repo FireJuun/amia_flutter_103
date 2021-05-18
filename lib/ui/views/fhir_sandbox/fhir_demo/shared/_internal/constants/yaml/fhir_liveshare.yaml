@@ -16,8 +16,8 @@ item:
         text: Good FHIR puns (each vote counts as 1)
         type: choice
         answerOption:
-          - valueString: Always
-          - valueString: Sometimes
+          - valueString: The roof is on FHIR
+          - valueString: Welcome to the FHIR brigade
       - extension:
           - url: "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
             valueCodeableConcept:
@@ -29,5 +29,5 @@ item:
         text: Favorite FHIR pun (vote counts as 5)
         type: choice
         answerOption:
-          - valueString: Always
-          - valueString: Sometimes
+          - valueString: The roof is on FHIR
+          - valueString: Welcome to the FHIR brigade

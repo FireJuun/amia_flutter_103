@@ -29,10 +29,13 @@ const fhirLiveshareJson = {
           "type": "choice",
           "answerOption": [
             {
-              "valueCoding": {"code": "0", "display": "Always"}
+              "valueCoding": {"code": "0", "display": "The roof is on FHIR"}
             },
             {
-              "valueCoding": {"code": "1", "display": "Sometimes"}
+              "valueCoding": {
+                "code": "1",
+                "display": "Welcome to the FHIR brigade"
+              }
             }
           ]
         },
@@ -57,10 +60,13 @@ const fhirLiveshareJson = {
           "type": "choice",
           "answerOption": [
             {
-              "valueCoding": {"code": "0", "display": "Always"}
+              "valueCoding": {"code": "0", "display": "The roof is on FHIR"}
             },
             {
-              "valueCoding": {"code": "1", "display": "Sometimes"}
+              "valueCoding": {
+                "code": "1",
+                "display": "Welcome to the FHIR brigade"
+              }
             }
           ]
         }
