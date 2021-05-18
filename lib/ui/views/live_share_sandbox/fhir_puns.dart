@@ -8,6 +8,7 @@ class FhirPuns extends StatelessWidget {
         _FhirPunsTitle(),
         Expanded(
           child: Container(
+            padding: const EdgeInsets.all(8),
             decoration: const BoxDecoration(
               image: DecorationImage(
                   image: AssetImage('assets/images/pexels-pixabay-417070.jpeg'),
@@ -15,8 +16,8 @@ class FhirPuns extends StatelessWidget {
             ),
             child: ListView(
               children: const <Widget>[
-                _PunText('text'),
-                _PunText('text'),
+                _PunText('The roof is on FHIR'),
+                _PunText('Welcome to the FHIR brigade'),
                 _PunText('text'),
                 _PunText('text'),
                 _PunText('text'),
